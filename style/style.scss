@@ -1,0 +1,275 @@
+﻿html{
+	padding-bottom: 50px;
+}
+body{
+	background-image: url(../img/bg-main.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-color: #1b232b;
+	padding: 0 3%;
+	margin: 0;
+}
+body>*{
+	font-family: Myriad Pro;
+}
+.main-wrapper{
+	width: 100%;
+	max-width: 990px;
+	margin: 0 auto;
+	margin-top: 70px;
+	
+	.select-currency{
+		width: 100%;
+		min-height: 100px;
+	/*	overflow: hidden;*/
+		border: 1px solid #253b45;
+		border-radius: 8px;
+		background-color: rgba(20, 32, 39, 0.2);
+		
+		.select-holder{
+			width: 33.33%;
+			float: right;
+			
+			div{
+				width: 100%;
+				max-width: 295px;
+				height: 50px;
+				float: right;
+				margin: 4% 3% 0 0;
+				
+				.nice-select{
+					background-color: #142027;
+					color: silver;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #53e9ff;
+					
+					.option{
+						height: 25px;
+						min-height: 25px;
+						line-height: 25px;
+					}
+				}
+				.nice-select:after{
+					border-bottom: 1px solid #53e9ff;
+					border-right: 1px solid #53e9ff;
+				}
+				.list{
+					width: 100%;
+					background-color: #142027;
+					border: 1px solid #53e9ff;
+					font-size: 1.2em;
+					margin-top: 10px;
+					padding: 10px 0;
+				}
+				.nice-select .option:hover, .nice-select .option.focus{
+					background-color: #2196F3; 
+				}
+				.nice-select .option.selected{
+					display: none;
+				}
+				span{
+					float: left;
+					line-height: 50px;
+					vertical-align: middle;
+					font-size: 1.2em;
+				}
+			}
+		}
+		.h1-holder{
+			width: 66.66%;
+			float: left;
+			text-align: center;
+			color: white;
+			line-height: 55px;
+			vertical-align: middle;
+		}
+	}
+	.currency-wrapper{	
+		width: 100%;
+		/*background-color: #eef;*/
+		margin-top: 50px;
+		color: white;
+
+		p, h3, h4{
+			padding: 0 30px 0 30px;
+		}
+		p{
+			margin: 3px 0 0 0;
+			font-size: 0.9em;
+		}
+		span{
+			color: #11c536;
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		.currency-item{
+			width: 31%;
+			max-width: 308px;
+			min-height: 350px;
+			float: left;
+			border-radius: 8px;
+		}
+		.currency-item + .currency-item{
+			margin-left: 3.5%;
+		}
+		.switch-holder{
+			height: 20px;
+			
+			div{
+				padding: 0 30px 0 30px;
+				font-size: 0.9em;
+			}
+			.switch {
+				position: relative;
+				display: inline-block;
+				width: 60px;
+				height: 20px;
+				float: right;
+			}
+			.switch input{
+				display:none;
+			}
+			.slider {
+				height: 20px;
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 32%;
+				right: 0;
+				bottom: 0;
+				background-color: #2196F3;
+				-webkit-transition: .4s;
+				transition: .4s;
+			}
+			.slider:before {
+				position: absolute;
+				content: "";
+				height: 24px;
+				width: 24px;
+				left: -4px;
+				bottom: -5px;
+				background-color: white;
+				-webkit-transition: .4s;
+				transition: .4s;
+			}
+			input:checked + .slider {
+				background-color: #ccc;
+			}
+
+			input:focus + .slider {
+				box-shadow: 0 0 1px #ccc;
+			}
+			input:checked + .slider:before {
+				-webkit-transform: translateX(22px);
+				-ms-transform: translateX(22px);
+				transform: translateX(22px);
+			}
+			.slider.round {
+				border-radius: 34px;
+				width: 40px;
+				height: 15px;
+			}
+			.slider.round:before {
+				border-radius: 50%;
+				background-image: url(../img/radio.png);
+			}
+		}
+		.h2-holder{
+			width: 100%;
+			height: 150px;
+		}
+		span{
+			float: right;
+		}
+		.price{
+			color: #fff;
+		}
+		h2{
+				text-align: center;
+		}
+		h3{
+			margin-bottom: 3%;
+		}
+		.ethereum{
+			background-image: url(../img/bg-ethereum.png);
+			
+			p{
+				color: #416c59;
+			}
+		}
+		.litecoin{
+			background-image: url(../img/bg-litecoin.png);
+			
+			p{
+				color: #5b5b5b;
+			}
+		}
+		.bitcoin{
+			background-image: url(../img/bg-bitcoin.png);
+			
+			p{
+				color: #5f3c35;
+			}
+		}
+		.ethereum, .litecoin, .bitcoin{
+			background-size: cover;
+			background-position: center center;
+		}
+	}
+	
+}
+@media (max-width: 768px){
+	.main-wrapper{
+		
+		h1{
+			font-size: 1.9em;
+		}
+		.select-holder{
+				
+			div{
+				margin: 6% 4% 0 0;
+			}
+		}
+		.currency-wrapper{
+			
+			.currency-item{
+				width: 42%;
+				margin: 4%;
+			}
+		}
+	}
+}
+@media (max-width: 640px){
+	.main-wrapper{
+		
+		.select-currency{
+			.h1-holder{
+				line-height: 70px;
+				width: 100%;
+				float: none;
+				
+			}
+			.select-holder{
+				width: 100%;
+				float: none;
+			
+				div{
+					margin: 0;
+					max-width: 583px;
+					float: none;
+				}
+			}
+		}
+		.currency-wrapper{
+			margin-top: 0;
+			
+			.currency-item, .currency-item + .currency-item{
+				width: 100%;
+				margin: 5% auto;
+				float: none;
+				padding: 1px;
+			}
+		}
+	}
+}
