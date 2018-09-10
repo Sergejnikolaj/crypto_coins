@@ -244,11 +244,13 @@ body>*{
 	.main-wrapper{
 		
 		.select-currency{
+			padding: 0 20px 20px;
+			box-sizing: border-box;
+		
 			.h1-holder{
 				line-height: 70px;
 				width: 100%;
 				float: none;
-				
 			}
 			.select-holder{
 				width: 100%;

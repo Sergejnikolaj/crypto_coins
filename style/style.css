@@ -177,17 +177,20 @@ body > * {
     margin: 4%; } }
 
 @media (max-width: 640px) {
-  .main-wrapper .select-currency .h1-holder {
-    line-height: 70px;
-    width: 100%;
-    float: none; }
-  .main-wrapper .select-currency .select-holder {
-    width: 100%;
-    float: none; }
-    .main-wrapper .select-currency .select-holder div {
-      margin: 0;
-      max-width: 583px;
+  .main-wrapper .select-currency {
+    padding: 0 20px 20px;
+    box-sizing: border-box; }
+    .main-wrapper .select-currency .h1-holder {
+      line-height: 70px;
+      width: 100%;
       float: none; }
+    .main-wrapper .select-currency .select-holder {
+      width: 100%;
+      float: none; }
+      .main-wrapper .select-currency .select-holder div {
+        margin: 0;
+        max-width: 583px;
+        float: none; }
   .main-wrapper .currency-wrapper {
     margin-top: 0; }
     .main-wrapper .currency-wrapper .currency-item, .main-wrapper .currency-wrapper .currency-item + .currency-item {
